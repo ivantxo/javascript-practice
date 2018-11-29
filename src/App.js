@@ -26,6 +26,18 @@ let builtArr1 = builtArray.map(function(item) {
 // ES6
 let builtArr2 = builtArray.map(item => item + ', ');
 
+//------------ Template literals ------------//
+
+// ES5
+function literals(name, age) {
+  return 'Hello ' + name + '. Your age is ' + age + ' years old.';
+}
+
+// ES6
+const literalsES6 = (name, age) => `Hello ${name}. Your age is ${age} years old.`;
+
+
+
 
 class App extends Component {
   render() {
@@ -36,6 +48,8 @@ class App extends Component {
         <p>Arrow Functions 2: {arrowFuncEs62('Sonia')}</p>
         <p>Built-in ES5: {builtArr1}</p>
         <p>Built-in ES6: {builtArr2}</p>
+        <p>Template Literals ES5: {literals('Ivan', 20)}</p>
+        <p>Template Literals ES6: {literalsES6('Sonia', 22)}</p>
         </header>
       </div>
     );
