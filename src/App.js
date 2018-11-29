@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 //----------------------------- Arrow functions -----------------------------//
@@ -69,8 +68,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <p>Arrow Functions 1: {arrowFuncEs6('Ivan')}</p>
-        <p>Arrow Functions 2: {arrowFuncEs62('Sonia')}</p>
+        <p>Arrow Functions ES5: {arrowFunc('Sonia')}</p>
+        <p>Arrow Functions ES6 1: {arrowFuncEs6('Ivan')}</p>
+        <p>Arrow Functions ES6 2: {arrowFuncEs62('Sonia')}</p>
         <p>Built-in ES5: {builtArr1}</p>
         <p>Built-in ES6: {builtArr2}</p>
         <p>Template Literals ES5: {literals('Ivan', 20)}</p>
