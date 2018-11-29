@@ -15,6 +15,7 @@ const arrowFuncEs6 = name => {
 
 const arrowFuncEs62 = name => `Hello ${name}`;
 
+
 //----------------------------- Arrow functions with built-in functions -----------------------------//
 const builtArray = ['Hau', 'Pradeep', 'Ivan', 5];
 
@@ -26,6 +27,7 @@ let builtArr1 = builtArray.map(function(item) {
 // ES6
 let builtArr2 = builtArray.map(item => item + ', ');
 
+
 //----------------------------- Template literals -----------------------------//
 
 // ES5
@@ -36,8 +38,11 @@ function literals(name, age) {
 // ES6
 const literalsES6 = (name, age) => `Hello ${name}. Your age is ${age} years old.`;
 
+
 //----------------------------- Default parameters -----------------------------//
+
 const defaultParamsES6 = (name, age = 22) => `Hello ${name}. Your age is ${age} years old`;
+
 
 //----------------------------- Object and Array constructing -----------------------------//
 
@@ -56,9 +61,6 @@ let {name: name2, surname: surname2, age: age2} = contact;
 
 const players = ['Lionel', 'Roman', 'James', 3];
 let [value1, value2, value3] = players;
-
-
-
 
 
 
