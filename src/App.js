@@ -62,6 +62,13 @@ const players = ['Lionel', 'Roman', 'James', 3];
 let [value1, value2, value3] = players;
 
 
+//----------------------------- Promises -----------------------------//
+
+const getData = () => {
+  const url='https://jsonplaceholder.typicode.com/posts';
+  return fetch(url).then(data=> data.json()).then(result=> console.log(result));
+}
+getData();
 
 class App extends Component {
   render() {
