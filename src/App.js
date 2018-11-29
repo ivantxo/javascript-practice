@@ -36,7 +36,8 @@ function literals(name, age) {
 // ES6
 const literalsES6 = (name, age) => `Hello ${name}. Your age is ${age} years old.`;
 
-
+//------------ Default parameters ------------//
+const defaultParamsES6 = (name, age = 22) => `Hello ${name}. Your age is ${age} years old`;
 
 
 class App extends Component {
@@ -50,6 +51,7 @@ class App extends Component {
         <p>Built-in ES6: {builtArr2}</p>
         <p>Template Literals ES5: {literals('Ivan', 20)}</p>
         <p>Template Literals ES6: {literalsES6('Sonia', 22)}</p>
+        <p>Default parameters ES6: {defaultParamsES6('Sonia')}</p>
         </header>
       </div>
     );
