@@ -64,11 +64,52 @@ let [value1, value2, value3] = players;
 
 //----------------------------- Promises -----------------------------//
 
-const getData = () => {
-  const url='https://jsonplaceholder.typicode.com/posts';
-  return fetch(url).then(data=> data.json()).then(result=> console.log(result));
+// const getData = () => {
+//   const url='https://jsonplaceholder.typicode.com/posts';
+//   return fetch(url).then(data=> data.json()).then(result=> console.log(result));
+// }
+// getData();
+
+
+//----------------------------- Rest parameters -----------------------------//
+
+// ES5
+function addNumbersES5() {
+  const myNumbers = [1, 2, 3, 4];
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return myNumbers.reduce(reducer);
 }
-getData();
+
+// ES6
+function addNumbers() {
+  let result = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
+}
+
+/**
+ * This function produces an error because arguments is not an array and reduce is an array function.
+ */
+// function addWithReduce() {
+//   return arguments.reduce((sum, next) => sum + next);
+// }
+
+// The solution to the above error is to use rest parameters
+const addNumbersWithReduceES6 = ([...numbers]) => numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+
+//----------------------------- Spread Operator -----------------------------//
+
+const spreadOperatorES6 = () => {
+  const myArray = [1, 2, 3, 4, 5];
+  let [first, second, ...remaining] = myArray;
+  console.log('first', first);
+  console.log('second', second);
+  console.log('remaining', remaining);
+}
+
 
 class App extends Component {
   render() {
@@ -86,6 +127,10 @@ class App extends Component {
         <p>Structures ES5: {`Contact: ${name}, ${surname}, ${age}`}</p>
         <p>Structures ES6: {`Contact: ${name2}, ${surname2}, ${age2}`}</p>
         <p>Arrays ES6: {`Contact: ${value1}, ${value2}, ${value3}`}</p>
+        <p>Reduce function ES5: {addNumbersES5()}</p>
+        <p>Adding numbers without Reduce function: {addNumbers(1, 2)}</p>
+        <p>Adding numbers with Reduce function ES6: {addNumbersWithReduceES6([1, 2, 3, 4])}</p>
+        <p>Spread Operator ES6: {spreadOperatorES6()}</p>
         </header>
       </div>
     );
